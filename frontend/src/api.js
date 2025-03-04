@@ -11,6 +11,22 @@ const api = axios.create({
 
 api.interceptors.request.use(
     (config) => {
-        
+        const accessToken = localStorage.getItem(ACCESS_TOKEN);
+        if (accessToken) {
+            config.headers.Authorization = `Bearer ${accessToken}`;
+        }
+
+        const googleAccessToken = localStorage.getItem("GOOGLE_ACCESS_TOKEN");
+        if (googleAccessToken) {
+            config.headers["X-Google-Access-Token"] = googleAccessToken
+        }
+
+        return config;
+    },
+
+    (error) => {
+        return Promise.reject(error);
     }
 )
+
+export default api;
