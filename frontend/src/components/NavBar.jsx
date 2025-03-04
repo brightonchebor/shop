@@ -9,7 +9,7 @@ function NavBar() {
 
     return (
         <div className="navbar">
-            
+
             <Link to="/" className="navbar-logo-link">
                 <img src={logo} alt="Logo" className="navbar-logo"/>
             </Link>
@@ -40,9 +40,7 @@ function NavBar() {
                             <Link to="/register" className="button-link">Register</Link>
                         </li>
                     </>
-                
-                
-               
+                  
             </ul>
         </div>
     );

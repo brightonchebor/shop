@@ -1,10 +1,19 @@
 /* Navbar.css */
+* {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
     background-color: whitesmoke;
+
+    /* max-width: 100%;
+    overflow-x: hidden; */
 }
 
 .navbar-logo-link {
@@ -29,8 +38,8 @@
 }
 
 .navbar-menu-left {
-    margin-left: 80px; /* Add space between the logo and left menu */
-    gap: 55px;
+    margin-left: 10px; /* Add space between the logo and left menu */
+    gap: 1px;
 }
 
 .navbar-menu-left a {
@@ -43,7 +52,9 @@
 }
 
 .navbar-menu-right {
-    margin-left: auto;
+    margin-left: 300px !important;
+    /* flex-grow: 1;
+    text-align: right;     */
 }
 
 .navbar-menu-right a {
