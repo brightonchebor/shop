@@ -42,7 +42,7 @@ def google_login_callback(request):
         print('No social account for user: ', user)
         return redirect('http://localhost:5173/login/callback/?error=NoSocialAccount')
     
-    token = SocialToken.objects.filter(account=social_account, account__providers='google').first()
+    token = SocialToken.objects.filter(account=social_account, account__provider='google').first()
 
     if token:
         print('Google Token Found: ', token.Token)
